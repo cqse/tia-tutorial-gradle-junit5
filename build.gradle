@@ -5,7 +5,16 @@ plugins {
 group 'eu.cqse.tutorials'
 version '1.0-SNAPSHOT'
 
-sourceCompatibility = 1.8
+// Please make use of this toolchain feature also in
+// your Gradle projects to specify the Java version 
+// to use. Setting paths to particular JDK installations
+// has shown to be error prone and is not supported by
+// some Gradle plugins well.
+java {
+  toolchain {
+    languageVersion.set(JavaLanguageVersion.of(11))
+  }
+}
 
 repositories {
     mavenCentral()

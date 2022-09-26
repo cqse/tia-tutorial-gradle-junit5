@@ -25,6 +25,10 @@ tasks.register('tiaTests', com.teamscale.TestImpacted) {
     }
 }
 
+tasks.named('teamscaleReportUpload') {
+    mustRunAfter 'tiaTests'
+}
+
 group 'eu.cqse.tutorials'
 version '1.0-SNAPSHOT'
 

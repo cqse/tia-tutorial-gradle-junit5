@@ -1,3 +1,11 @@
+pluginManagement {
+    repositories {
+        mavenLocal()
+        mavenCentral()
+        gradlePluginPortal()
+    }
+}
+
 rootProject.name = 'tia-tutorial'
 
 dependencyResolutionManagement {
@@ -6,4 +14,3 @@ dependencyResolutionManagement {
         mavenCentral()
     }
 }
-

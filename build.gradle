@@ -12,7 +12,7 @@ version '1.0-SNAPSHOT'
 // some Gradle plugins well.
 java {
   toolchain {
-    languageVersion.set(JavaLanguageVersion.of(11))
+    languageVersion.set(JavaLanguageVersion.of(21))
   }
 }
 
@@ -21,8 +21,8 @@ repositories {
 }
 
 dependencies {
-    testImplementation 'org.junit.jupiter:junit-jupiter:5.5.2'
-    testImplementation 'org.junit.jupiter:junit-jupiter-engine:5.5.2'
+    testImplementation 'org.junit.jupiter:junit-jupiter:5.10.3'
+    testImplementation 'org.junit.jupiter:junit-jupiter-engine:5.10.3'
 }
 
 tasks.withType(Test) {

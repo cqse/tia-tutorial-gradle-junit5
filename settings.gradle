@@ -1,2 +1,9 @@
-rootProject.name = 'untitled'
+rootProject.name = 'tia-tutorial'
+
+dependencyResolutionManagement {
+    repositories {
+        mavenLocal()
+        mavenCentral()
+    }
+}
 

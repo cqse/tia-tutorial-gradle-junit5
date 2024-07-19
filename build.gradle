@@ -3,12 +3,29 @@ plugins {
     id "com.teamscale" version "35.0.0"
 }
 
+import com.teamscale.reporting.testwise.TestwiseCoverageReport
+
 teamscale {
     server {
         url = 'http://localhost:8080/'
         userName = 'admin'
         userAccessToken = 'q4tu9vfAAjQZ1peCpPvQHSrLi5CeIcGY'
         project = 'tia-junit5'
+    }
+}
+
+tasks.register('testwiseCoverageReport', TestwiseCoverageReport) {
+    executionData(tasks.test)
+}
+
+tasks.test {
+    useJUnitPlatform()
+    finalizedBy(tasks.testwiseCoverageReport)
+    jacoco {
+        includes = ["tia.*"]
+    }
+    teamscale {
+        collectTestwiseCoverage = true
     }
 }
 

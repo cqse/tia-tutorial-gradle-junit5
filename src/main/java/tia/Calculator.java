@@ -7,7 +7,7 @@ public class Calculator {
     }
 
     private int sumImpl(int a, int b) {
-        return a + b;
+        return a - b;
     }
 
     public int minus(int a, int b) {

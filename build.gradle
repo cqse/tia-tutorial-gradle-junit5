@@ -18,6 +18,15 @@ teamscale {
 
 }
 
+tasks.register('tiaTests', com.teamscale.TestImpacted) {
+    useJUnitPlatform()
+    testClassesDirs = testing.suites.test.sources.output.classesDirs
+    classpath = testing.suites.test.sources.runtimeClasspath
+    jacoco {
+        includes = ["tia.*"]
+    }
+}
+
 group 'eu.cqse.tutorials'
 version '1.0-SNAPSHOT'
 

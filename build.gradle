@@ -27,6 +27,8 @@ tasks.test {
     }
     teamscale {
         collectTestwiseCoverage = true
+        runImpacted = true
+        partition = "Unit Tests"
     }
 }
 

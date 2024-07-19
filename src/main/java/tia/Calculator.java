@@ -2,8 +2,8 @@ package tia;
 
 public class Calculator {
 
-    public int sum(int a, int b) {
-        return sumImpl(a, b);
+    public int sum(int first, int second) {
+        return sumImpl(first, second);
     }
 
     private int sumImpl(int a, int b) {

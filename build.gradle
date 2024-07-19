@@ -1,5 +1,21 @@
 plugins {
     id 'java'
+    id "com.teamscale" version "34.0.1"
+}
+
+teamscale {
+
+    server {
+        url = 'http://localhost:8080/'
+        userName = 'admin'
+        userAccessToken = 'q4tu9vfAAjQZ1peCpPvQHSrLi5CeIcGY'
+        project = 'tia-junit5'
+    }
+
+    report {
+        testwiseCoverage { partition = 'Unit Tests' }
+    }
+
 }
 
 group 'eu.cqse.tutorials'

@@ -2,11 +2,11 @@ plugins {
     id 'java'
 }
 
-group 'eu.cqse.tutorials'
-version '1.0-SNAPSHOT'
+group = 'eu.cqse.tutorials'
+version = '1.0-SNAPSHOT'
 
 // Please make use of this toolchain feature also in
-// your Gradle projects to specify the Java version 
+// your Gradle projects to specify the Java version
 // to use. Setting paths to particular JDK installations
 // has shown to be error prone and is not supported by
 // some Gradle plugins well.
@@ -17,7 +17,7 @@ java {
 }
 
 dependencies {
-    testImplementation(platform('org.junit:junit-bom:5.10.3'))
+    testImplementation(platform('org.junit:junit-bom:5.12.0'))
     testImplementation('org.junit.jupiter:junit-jupiter')
     testRuntimeOnly('org.junit.platform:junit-platform-launcher')
 }
@@ -25,8 +25,8 @@ dependencies {
 tasks.withType(Test) {
     useJUnitPlatform()
     testLogging {
-        exceptionFormat "short"
-        showCauses false
+        exceptionFormat = "short"
+        showCauses = false
         events "failed", "passed"
     }
 }

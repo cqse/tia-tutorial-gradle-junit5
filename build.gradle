@@ -4,6 +4,7 @@ plugins {
 }
 
 import com.teamscale.reporting.testwise.TestwiseCoverageReport
+import com.teamscale.TeamscaleUpload
 
 teamscale {
     server {
@@ -27,6 +28,11 @@ tasks.test {
     teamscale {
         collectTestwiseCoverage = true
     }
+}
+
+tasks.register('teamscaleTestUpload', TeamscaleUpload) {
+    partition = "Unit Tests"
+    from(tasks.testwiseCoverageReport)
 }
 
 group = 'eu.cqse.tutorials'
